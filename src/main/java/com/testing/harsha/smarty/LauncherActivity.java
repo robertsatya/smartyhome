@@ -16,6 +16,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 
@@ -41,6 +43,11 @@ public class LauncherActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher);
 
+
+        Window window = getWindow();
+        //window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        //window.setStatusBarColor(getResources().getColor(R.color.primaryDark));
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
