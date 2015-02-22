@@ -49,16 +49,7 @@ public class ContactsFragment extends ListFragment implements LoaderManager.Load
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
-    class ContactsAdapter extends ArrayAdapter<ContactItem> {
 
-        public ContactsAdapter () {
-
-        }
-
-        public ContactsAdapter(Context context, int resource, int textViewResId, List objects) {
-
-        }
-    }
 
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {

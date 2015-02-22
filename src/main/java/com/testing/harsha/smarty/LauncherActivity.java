@@ -88,10 +88,7 @@ public class LauncherActivity extends ActionBarActivity {
 
         @Override
         public Fragment getItem(int position) {
-            switch (position) {
-                case 0: return ContactsFragment.newInstance(position);
-                case 1: return null;
-            }
+
 
             return PlaceholderFragment.newInstance(position + 1);
         }
