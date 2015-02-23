@@ -56,7 +56,7 @@ public class LauncherActivity extends ActionBarActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-
+        mViewPager.setCurrentItem(1, true);
     }
 
 
@@ -96,8 +96,12 @@ public class LauncherActivity extends ActionBarActivity {
         @Override
         public Fragment getItem(int position) {
 
-
-            return PlaceholderFragment.newInstance(position + 1);
+            switch (position) {
+                case 2:
+                    return AppDrawerFragment.newInstance();
+                default:
+                    return PlaceholderFragment.newInstance(position+1);
+            }
         }
 
         @Override
