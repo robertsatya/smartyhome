@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:id="@+id/app_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true">
     <ImageButton
         android:id="@+id/app_icon"
         android:layout_width="@dimen/app_drawer_icon_size"
         android:layout_height="@dimen/app_drawer_icon_size"
-        android:scaleType="center"
-        android:scaleX="0.8"
+        android:scaleType="fitXY"
         android:scaleY="0.8"
+        android:scaleX="0.8"
+        android:clickable="false"
+        android:focusable="false"
+        android:background="@null"
         android:src="@android:drawable/sym_def_app_icon"/>
     <TextView
         android:id="@+id/app_name"
         android:layout_width="@dimen/app_drawer_icon_size"
-        android:layout_height="wrap_content" />
+        android:gravity="center"
+        android:clickable="false"
+        android:focusable="false"
+        android:layout_height="20dp" />
 
 </LinearLayout>
