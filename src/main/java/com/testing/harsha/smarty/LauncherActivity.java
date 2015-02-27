@@ -1,16 +1,11 @@
 package com.testing.harsha.smarty;
 
-import java.util.Locale;
-
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.view.Gravity;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,7 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.TextView;
+
+import java.util.Locale;
 
 
 public class LauncherActivity extends ActionBarActivity {
@@ -38,11 +34,14 @@ public class LauncherActivity extends ActionBarActivity {
      */
     ViewPager mViewPager;
 
+    public static String PACKAGE_NAME;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher);
 
+        PACKAGE_NAME = getApplicationContext().getPackageName();
 
         Window window = getWindow();
         //window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
@@ -59,6 +58,10 @@ public class LauncherActivity extends ActionBarActivity {
         mViewPager.setCurrentItem(1, true);
     }
 
+    @Override
+    public void onBackPressed() {
+        mViewPager.setCurrentItem(1, true);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -123,6 +126,8 @@ public class LauncherActivity extends ActionBarActivity {
             }
             return null;
         }
+
+
     }
 
     /**

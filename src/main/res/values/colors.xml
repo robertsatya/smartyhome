@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#3e9f24</color>
-    <color name="primaryDark">#55924f</color>
+    <color name="primary">#419814</color>
+    <color name="primaryDark">#347a10</color>
     <color name="fab_color">#ff3d00</color>
     <color name="fab_pressed_color">#ff6e40</color>
+    <color name="app_background_color">#eebb88</color>
+    <color name="app_drawer_background_tint">#aa000000</color>
+    <color name="app_icon_label_color">#cacaca</color>
 </resources>

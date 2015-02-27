@@ -10,4 +10,7 @@
     <dimen name="elevation_high">8dp</dimen>
     <dimen name="contact_item_height">64dp</dimen>
     <dimen name="app_drawer_icon_size">72dp</dimen>
+    <dimen name="app_drawer_gridview_col_width">72dp</dimen>
+    <dimen name="app_icon_label_width">78dp</dimen>
+    <dimen name="app_icon_label_textsize">12dp</dimen>
 </resources>

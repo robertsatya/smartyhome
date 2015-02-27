@@ -4,6 +4,7 @@
     android:id="@+id/app_item_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
     android:clickable="true"
     android:focusable="true">
     <ImageButton
@@ -19,8 +20,12 @@
         android:src="@android:drawable/sym_def_app_icon"/>
     <TextView
         android:id="@+id/app_name"
-        android:layout_width="@dimen/app_drawer_icon_size"
+        android:layout_width="wrap_content"
         android:gravity="center"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textSize="@dimen/app_icon_label_textsize"
+        android:textColor="@color/app_icon_label_color"
         android:clickable="false"
         android:focusable="false"
         android:layout_height="20dp" />
